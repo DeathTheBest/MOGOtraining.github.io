@@ -1,0 +1,211 @@
+body {
+    background: grey;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+*,
+*::before
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;  
+
+}
+/* INTRO */
+.intro {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 100%;
+ height: 100vh;
+ background: url(../img/intro.png) center
+ no-repeat; 
+ background-size: cover;
+ 
+    
+
+}
+.intro__title {
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    line-height: 1; 
+
+}
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 60px auto 0;  
+}
+
+.intro__suptitle {
+    margin-bottom: 20px;
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+    
+
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    color: ivory;
+    text-align: center;
+}
+
+
+/* HEADER */
+.header {
+    padding-top: 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+} 
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* NAV */
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s linear;
+}
+
+.nav__link:hover {
+     color: #fce38a;    
+}
+
+
+.nav__link.active {
+    color: #fce38a;
+}
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+    position: absolute;
+    top:100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s;
+
+}
+.nav__link:hover:after {
+    
+    opacity: 1;
+
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;      /* е */
+    vertical-align: top;        /*  */
+    padding: 8px 30px;          /* размеры кнопки (рамочка) */
+    font-size: 14px;            
+    color: #fff;              /* цвет текста в кнопке */
+    border: 3px solid #fff;   /* ширина линий кнопки и цвет */
+    text-transform: uppercase;  /*  */
+    font-weight: 700;           /*  */
+    text-decoration: none;      /* убрать подчеркивание */
+    transition: background 1s  /* плавность для кнопки */
+    linear, color 1s linear    ; /* плавность для кнопки */
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+
+
+}
+
+/*SLIDER*/
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;  /* зазор между кнопкой и нижней линией */
+}
+
+.slider_item {
+    width: 24%;   /* ширина между итемами */
+    font-size: 18px; /* размер шрифта*/
+    color: #fff;
+    position: relative;
+    opacity: .7;
+    padding: 20px 0;   /* зазор между словами */
+    border-top: 3px solid;
+    text-transform: uppercase; /* делает буквы большими*/
+}
+.slider_item.active {
+    opacity: 1;
+}
+.slider_item.active:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #f38181;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+
+
+
+}
+
+.slider__num {
+    font-size: 24px;
+    font-weight: 700;
+
+}
