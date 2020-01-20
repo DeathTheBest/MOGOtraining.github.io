@@ -261,10 +261,24 @@ body {
     margin-top: 80px;
      display: flex;
      justify-content: space-between;
-
+   
 }
+  /* меняем вид для мобильных приложений */
+@media screen and (max-width: 800px) {  
+    .about__item:nth-child(2) {
+        padding: 20px 0;
+        background-color: inherit;
+    }
+    .about {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+ /* меняем вид для мобильных приложений */
 
 .about__item {
+    max-block-size: initial;
     width: 380px;
     background-color: #95e1d3; /* задний фон картинки после смещения  */
     position: relative;          /* сделать текст поверх картинки */
