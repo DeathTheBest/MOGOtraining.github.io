@@ -1,5 +1,5 @@
 body {
-    background: grey;
+    background: rgb(252, 252, 252);
     font-family: 'Kaushan Script', cursive;
     font-family: 'Montserrat', sans-serif;  
     font-size: 15px;
@@ -54,6 +54,7 @@ body {
 }
 
 .intro__suptitle {
+    
     margin-bottom: 20px;
     font-size: 72px;
     color: #fff;
@@ -180,7 +181,7 @@ body {
     width: 24%;   /* ширина между итемами */
     font-size: 18px; /* размер шрифта*/
     color: #fff;
-    position: relative;
+    position: relative ;
     opacity: .7;
     padding: 20px 0;   /* зазор между словами */
     border-top: 3px solid;
@@ -208,4 +209,145 @@ body {
     font-size: 24px;
     font-weight: 700;
 
+}
+
+/* section */
+
+.section {
+    padding: 80px 0;
+
+}
+
+.section__header {
+    margin: 0 auto 40px;
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+}
+
+.section__suptitle {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.section__title {
+    font-size: 30px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.section__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 30px auto;
+    
+}
+
+.section__text {
+    font-size: 15px;
+    color: #999;
+
+
+}
+
+/* ABOUT */
+
+.about {
+    margin-top: 80px;
+     display: flex;
+     justify-content: space-between;
+
+}
+
+.about__item {
+    width: 380px;
+    background-color: #95e1d3; /* задний фон картинки после смещения  */
+    position: relative;          /* сделать текст поверх картинки */
+}
+.about__item:hover .about__img{    /* картинка вверх подымается */
+    transform: translate3d(-10px, -10px, 0);     /* картинка вверх подымается */
+
+}
+
+.about__item:hover .about__img img {
+    opacity: .1;
+
+}
+.about__item:hover .about__test {  /* показать спрятанный текст */
+    opacity: 1;
+
+}
+
+.about__img {
+    background: linear-gradient(to bottom,
+    #f38181,#fce38a);
+    transition: transform .2s linear;  /* картинка вверх подымается плавность */
+
+}
+.about__img img {
+    transition: opacity .1s linear;
+    display: block;
+}
+
+.about__item:hover {
+
+}
+
+.about__test {
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase; 
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;  /* выровнять текст по центру картинки */
+    opacity: 0;          /* спрятать текст */   
+    position: absolute;
+    top:50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity .2s linear ; /* выровнять текст по центру картинки */
+}
+
+ /* statistics */
+
+ .statistics {
+    background-color: #95e1d3;
+
+ }
+
+ .stat {
+    display: flex;
+
+ }
+
+ .stat__item {
+    border-left: 2px solid #b5eae0;
+    flex: 1 1 0;
+    text-align: center;
+    color: #fff;
+    padding: 70px 25px;
+
+ }
+
+ .stat__item:last-child {
+    border-right: 2px solid #b5eae0;
+
+ }
+
+.stat__count {
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    
 }
