@@ -261,13 +261,14 @@ body {
     margin-top: 80px;
      display: flex;
      justify-content: space-between;
-   
+
 }
   /* меняем вид для мобильных приложений */
 @media screen and (max-width: 800px) {  
     .about__item:nth-child(2) {
         padding: 20px 0;
         background-color: inherit;
+        
     }
     .about {
       flex-direction: column;
@@ -306,6 +307,9 @@ body {
 .about__img img {
     transition: opacity .1s linear;
     display: block;
+    width:  380px;     /*для того что бы менять на любую картинку */
+    height: 250px;      /*для того что бы менять на любую картинку */
+    
 }
 
 .about__item:hover {
