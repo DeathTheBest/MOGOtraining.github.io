@@ -258,16 +258,15 @@ body {
 /* ABOUT */
 
 .about {
-    margin-top: 80px;
+     margin-top: 80px;
      display: flex;
      justify-content: space-between;
 
 }
-  /* меняем вид для мобильных приложений */
+   /* меняем вид для мобильных приложений */
 @media screen and (max-width: 800px) {  
     .about__item:nth-child(2) {
-        padding: 20px 0;
-        background-color: inherit;
+        margin: 20px 0;
         
     }
     .about {
@@ -279,6 +278,7 @@ body {
  /* меняем вид для мобильных приложений */
 
 .about__item {
+    
     max-block-size: initial;
     width: 380px;
     background-color: #95e1d3; /* задний фон картинки после смещения  */
@@ -302,7 +302,7 @@ body {
     background: linear-gradient(to bottom,
     #f38181,#fce38a);
     transition: transform .2s linear;  /* картинка вверх подымается плавность */
-
+    
 }
 .about__img img {
     transition: opacity .1s linear;
@@ -313,10 +313,11 @@ body {
 }
 
 .about__item:hover {
-
+ 
 }
 
 .about__test {
+    
     width: 100%;
     color: #fff;
     text-transform: uppercase; 
