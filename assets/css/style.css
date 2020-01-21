@@ -440,6 +440,6 @@ hr {
 .devices__item--iphone {
     position: absolute;
     bottom: -90px;  
-    right: -50px;
+    right: -75px;
     z-index: 1;
 }
