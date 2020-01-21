@@ -228,12 +228,18 @@ hr {
 }
 
 .section--devices {
+    margin-bottom: 40px;
     padding-bottom: 0;
     background: 
     url("../img/section-devices/fone.png")
     center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+.section--gray {
+    background-color: #f8f8f8;
+
 }
 
 .section__header {
@@ -440,6 +446,184 @@ hr {
 .devices__item--iphone {
     position: absolute;
     bottom: -90px;  
-    right: -50px;
+    right: -75px;
     z-index: 1;
+}
+
+/* photo */
+.photo {
+ display: flex;
+
+}
+
+.photo__item {
+    width: 50%;
+
+}
+
+/*accordion */
+
+.accordion__item {
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+
+}
+
+.accordion__item.active 
+.accordion__content {
+    display: block;
+}
+
+.accordion__item.active
+.accordion__header {
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+.accordion__item.active
+.accordion__header:after {
+    transform: translateY(-50%)
+    rotate(-45deg) ;
+    margin-top: 5px;   
+
+}
+
+
+
+.accordion__header {
+    padding: 15px 20px 15px 60px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+
+/* стрелочка вверх */
+.accordion__header:after {
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 16px;
+    
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%)
+    rotate(135deg) ;   
+
+}
+/* стрелочка вверх */
+
+.accordion__icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+
+.accordion__content {
+    padding: 15px 20px;
+    font-size: 15px;
+    color: #999;
+    font-style: italic;
+    font-weight: 300;
+    display: none;
+}
+
+.accordion__title {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+
+
+}
+
+
+/* Reviews */
+
+.reviews {
+    padding: 0 110px;
+    position: relative;
+}
+
+.reviews__item {
+padding-left: 205px;
+position: relative;
+
+}
+
+.reviews__photo {
+    border: 2px solid #95e1d3;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: 1;
+}
+
+.reviews__text {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.reviews__author {
+    font-family: 'Kaushan Script',
+    cursive;
+    font-size: 24px;
+    color: black;
+    
+}
+.reviews__author:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-right: 10px;
+
+}
+
+.reviews__btn {
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+}
+
+.reviews__btn:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    
+}
+
+
+
+.reviews__btn--prev {
+    left: 20px;
+    transform: rotate(-135deg) translateY(-50%);
+}
+
+
+.reviews__btn--next {
+    right: 20px;
+    transform: rotate(45deg) translateY(-50%);
 }
