@@ -8,6 +8,9 @@ body {
     margin: 0;
 }
 
+
+
+
 hr {
     border: 0;
     background-color: #e5e5e5;
@@ -65,7 +68,7 @@ hr {
 .intro__suptitle {
     
     margin-bottom: 20px;
-    font-size: 72px;
+    font-size: 70px;
     color: #fff;
     font-family: 'Kaushan Script', cursive;
     
@@ -186,7 +189,7 @@ hr {
     margin-top: 30px;  /* зазор между кнопкой и нижней линией */
 }
 
-.slider_item {
+.slider__item {
     width: 24%;   /* ширина между итемами */
     font-size: 18px; /* размер шрифта*/
     color: #fff;
@@ -196,10 +199,10 @@ hr {
     border-top: 3px solid;
     text-transform: uppercase; /* делает буквы большими*/
 }
-.slider_item.active {
+.slider__item.active {
     opacity: 1;
 }
-.slider_item.active:before {
+.slider__item.active:before {
     content: "";
     display: block;
     width: 70px;
@@ -279,68 +282,61 @@ hr {
 
 }
 
-/* ABOUT */
+/* card */
 
-.about {
+.card {
      margin-top: 80px;
      display: flex;
      justify-content: space-between;
-
+    
 }
-   /* меняем вид для мобильных приложений */
-@media screen and (max-width: 800px) {  
-    .about__item:nth-child(2) {
-        margin: 20px 0;
-        
-    }
-    .about {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
- /* меняем вид для мобильных приложений */
 
-.about__item {
+
+
+.card__item {
     
     max-block-size: initial;
     width: 380px;
-    background-color: #95e1d3; /* задний фон картинки после смещения  */
-    position: relative;          /* сделать текст поверх картинки */
+     
+    
 }
-.about__item:hover .about__img{    /* картинка вверх подымается */
+
+.card__inner {
+    position: relative;          /* сделать текст поверх картинки */
+    background-color: #95e1d3; /* задний фон картинки после смещения  */
+
+
+}
+
+.card__inner:hover .card__img{    /* картинка вверх подымается */
     transform: translate3d(-10px, -10px, 0);     /* картинка вверх подымается */
 
 }
 
-.about__item:hover .about__img img {
+.card__inner:hover .card__img img {
     opacity: .1;
 
 }
-.about__item:hover .about__test {  /* показать спрятанный текст */
+.card__inner:hover .card__test {  /* показать спрятанный текст */
     opacity: 1;
-
 }
 
-.about__img {
+.card__img {
     background: linear-gradient(to bottom,
     #f38181,#fce38a);
     transition: transform .2s linear;  /* картинка вверх подымается плавность */
     
 }
-.about__img img {
+.card__img img {
     transition: opacity .1s linear;
     display: block;
-    width:  380px;     /*для того что бы менять на любую картинку */
-    height: 250px;      /*для того что бы менять на любую картинку */
+         
     
 }
 
-.about__item:hover {
- 
-}
 
-.about__test {
+
+.card__test {
     
     width: 100%;
     color: #fff;
@@ -356,6 +352,30 @@ hr {
     transform: translate3d(0, -50%, 0);
     transition: opacity .2s linear ; /* выровнять текст по центру картинки */
 }
+
+.card__info {
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.card__name {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px; 
+
+}
+
+.card__prof {
+    font-size: 15px;
+    font-style: italic;
+    color: #999;
+    font-weight: 300;
+
+}
+
+
 
  /* statistics */
 
@@ -626,4 +646,52 @@ position: relative;
 .reviews__btn--next {
     right: 20px;
     transform: rotate(45deg) translateY(-50%);
+}
+
+
+/*  CARD SOCIAL */
+
+.social {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.social__item {
+    width: 55px;
+    height: 55px;
+    padding: 10px 10px;
+    
+    background-color: #fce38a;
+    border-right: 1px solid #f38181;
+    
+    font-size: 50px;
+    text-decoration: none;
+    color: red;
+    line-height: 1;
+    transition: background .1s 
+    linear color .1s linear;
+}
+
+
+.social__item:last-child {
+    border-right: 0;
+}
+
+.social__item:hover {
+    color: #fff;
+    background-color: red;
+}
+
+
+
+/* CARD SOCIAL */
+
+/* logos */
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+
 }
