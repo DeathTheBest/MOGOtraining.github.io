@@ -30,11 +30,14 @@ hr {
 /* Container */
 .container {
       width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;  
+      max-width: 1230px;
+      margin: 0 auto;
+    padding: 0 15px;
 
 }
+
 /* INTRO */
+
 .intro {
  display: flex;
  flex-direction: column;
@@ -304,19 +307,17 @@ background-size: cover;
 /* card */
 
 .card {
-     margin-top: 80px;
+     margin: 80px -15px 0;
      display: flex;
      justify-content: space-between;
+     
     
 }
 
-
-
 .card__item {
     
-    max-block-size: initial;
-    width: 380px;
-     
+    width: 33.33333%;
+    padding: 0 20px;
     
 }
 
@@ -344,13 +345,14 @@ background-size: cover;
     background: linear-gradient(to bottom,
     #f38181,#fce38a);
     transition: transform .2s linear;  /* картинка вверх подымается плавность */
-    
+     
 }
 .card__img img {
     transition: opacity .1s linear;
     display: block;
-         
-    
+    max-width: 100%;     
+    height: auto;
+
 }
 
 
@@ -1196,3 +1198,113 @@ font-size: 18px ;
     color: #f38181;
     
 }
+
+@media (max-width: 1230px) {
+    
+    .intro__suptitle {
+        font-size: 52px;
+
+    }
+
+    .intro__title {
+        font-size: 90px;
+    }
+
+
+}
+
+@media (max-width: 990px) {
+    
+    .intro__suptitle {
+        font-size: 32px;
+
+    }
+
+    .intro__title {
+        font-size: 80px;
+
+    }
+    
+}
+
+@media (max-width: 770px) {
+    
+    .nav {
+        display: none;
+    }
+    
+    /* section */
+
+    .section {
+        padding: 40px 0;
+    }
+
+    /* card */
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .card__item {
+        width: 100%;
+        max-width: 380px;
+        margin-bottom: 30px;
+        
+    }
+
+    .card__item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* slider */
+    .slider__text {
+        display: none;
+    }
+
+    .slider__item.active:before {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 570px) {  
+    
+    .intro__suptitle {
+        font-size: 22px;
+
+    }
+
+    .intro__title {
+        font-size: 40px;
+        
+    }
+    
+    /* section */
+    .section__header {
+        margin-bottom: 50px;
+
+    }
+
+    .section__suptitle{
+        font-size: 20px;
+    }
+    .section__title {
+        font-size: 24px;
+    }
+
+    .section__title:after {
+        margin: 20px auto;
+    }
+
+
+    .card {
+        justify-content: center;
+    }
+
+
+
+
+}
+
